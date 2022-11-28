@@ -22,7 +22,7 @@ jobs:
     - name: Install node modules
       run: npm install
     - name: Build angular app
-      run: ng build --prod
+      run: ng build
     - name: Build the images
       run: docker compose -f docker-compose-prod.yml create
     - name: Publish the image
