@@ -17,6 +17,10 @@ jobs:
       with:
         username: helixow
         password: ${{ secrets.DOCKER_CONTAINER_REGISTRY_TOKEN }}
+    - name: Install angular cli
+      run: npm install -g @angular/cli
+    - name: Build angular app
+      run: ng build --prod
     - name: Build the images
       run: docker compose -f docker-compose-prod.yml create
     - name: Publish the image
