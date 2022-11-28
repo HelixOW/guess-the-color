@@ -1,0 +1,24 @@
+<div class="color-wrapper d-flex align-items-center" [style]="'background-color: ' + this.randomBackground + '; color: ' + this.whiteText + ';'">
+    <div class="container text-center">
+        <div class="row gx-5 gy-5">
+            <div class="col-12">
+                <h1>What Color is it?</h1>
+            </div>
+            <div class="col" *ngFor="let color of this.colorOptions">
+                <div class="colorCard glass d-flex align-items-center" (click)="this.checkCorrect(color)">
+                    <h2>{{color}}</h2>
+                </div>
+            </div>
+            <div class="col-12" *ngIf="this.clicked">
+                <h2 *ngIf="!this.correctColor">Incorrect!</h2>
+                <h2 *ngIf="this.correctColor">Correct!</h2>
+            </div>
+            <div class="col-12" *ngIf="this.counter > 0">
+                <h2>Streak: {{this.counter}}</h2>
+            </div>
+        </div>
+    </div>
+    <div class="footer glass d-flex align-items-center text-center">
+        <p>Made by HelixOW</p>
+    </div>
+</div>
