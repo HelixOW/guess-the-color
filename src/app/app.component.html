@@ -4,7 +4,7 @@
             <div class="col-12">
                 <h1>What Color is it?</h1>
             </div>
-            <div class="col" *ngFor="let color of this.colorOptions">
+            <div class="col-sm-12 col-md" *ngFor="let color of this.colorOptions">
                 <div class="colorCard glass d-flex align-items-center" (click)="this.checkCorrect(color)">
                     <h2>{{color}}</h2>
                 </div>
